@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { postDeleted, postUpdated } from "../../slice/postsSlice";
+import { postDeleted, postUpdated } from "../../features/postsSlice";
 
 const PostList = () => {
   const posts = useSelector((state) => state.posts);
-  console.log(posts);
+  const viewCounter = useSelector((state) => state.counter.value);
+
   const dispatch = useDispatch();
 
   const [isEdit, setIsEdit] = useState(false);
@@ -110,6 +111,7 @@ const PostList = () => {
                       Edit
                     </button>
                   </li>
+                  <li>{viewCounter}</li>
                 </div>
               ))
             ) : (

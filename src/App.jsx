@@ -2,10 +2,11 @@ import { useState } from "react";
 import Header from "./components/header/Header";
 import Counter from "./components/counter/Counter";
 import PostTodo from "./components/posts/PostTodo";
+import Main from "./components/apiCalling/main";
 
 function App() {
   const [reduxExample, setReducExample] = useState("Redux-Counter");
-  const btnLabel = ["Redux-Counter", "Redux-Post"];
+  const btnLabel = ["Redux-Counter", "Redux-Post", "Redux-ApiCalling"];
 
   const switchTab = () => {
     switch (reduxExample) {
@@ -13,6 +14,8 @@ function App() {
         return <Counter />;
       case "Redux-Post":
         return <PostTodo />;
+      case "Redux-ApiCalling":
+        return <Main />;
       default:
         break;
     }
