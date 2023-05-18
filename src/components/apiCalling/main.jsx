@@ -10,24 +10,41 @@ const Main = () => {
   //   });
 
   const { users, loading, error } = useSelector((state) => state.apiCall);
-  console.log(users);
 
   useEffect(() => {
     dispatch(getAllData());
   }, []);
 
   if (loading) return <p>Loading...</p>;
-  if (error) return <p>{users.message}</p>;
+  if (error) return <p>Error</p>;
+
+  const displayData = () => {
+    return users && users.length > 0 ? (
+      users.map((post) => <p key={post.id}>{post.login}</p>)
+    ) : (
+      <>
+        <h2>Data {users?.message}</h2>
+      </>
+    );
+  };
 
   return (
     <div>
       Api Calling with Redux
       <button onClick={() => dispatch(getAllData())}>Call Api</button>
-      {users.map((post) => (
-        <p key={post.id}>{post.login}</p>
-      ))}
+      {displayData()}
     </div>
   );
 };
 
 export default Main;
+
+{
+  /* {users && users.length > 0 ? (
+        users.map((post) => <p key={post.id}>{post.login}</p>)
+      ) : (
+        <>
+          <h2>Data {users?.message}</h2>
+        </>
+      )} */
+}
