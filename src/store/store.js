@@ -4,6 +4,7 @@ import postsSlice from "../features/postsSlice";
 import apiSlice from "../features/apiSlice";
 import productSlice from "../features/productSlice";
 import cartSlice from "../features/cartSlice";
+import axiosApiSlice from "../features/axiosSlice";
 
 export default configureStore({
   reducer: {
@@ -12,5 +13,6 @@ export default configureStore({
     apiCall: apiSlice,
     products: productSlice,
     cart: cartSlice,
+    axiosApiCall: axiosApiSlice,
   },
 });

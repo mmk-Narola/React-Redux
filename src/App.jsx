@@ -6,6 +6,7 @@ import Main from "./components/apiCalling/main";
 import ProductRootLayout from "./components/productProject/ProductRootLayout";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { useSelector } from "react-redux";
+import Axios from "./components/axiosApiCalling/axios";
 
 function App() {
   const [reduxExample, setReducExample] = useState("Redux-Counter");
@@ -14,6 +15,7 @@ function App() {
     "Redux-Post",
     "Redux-ApiCalling",
     "Redux-Product-Project",
+    "Redux-Fetch-Api-Axios",
   ];
   const cartItem = useSelector((state) => state.cart);
 
@@ -27,6 +29,8 @@ function App() {
         return <Main />;
       case "Redux-Product-Project":
         return <ProductRootLayout />;
+      case "Redux-Fetch-Api-Axios":
+        return <Axios />;
       default:
         break;
     }
