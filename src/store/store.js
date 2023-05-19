@@ -5,6 +5,7 @@ import apiSlice from "../features/apiSlice";
 import productSlice from "../features/productSlice";
 import cartSlice from "../features/cartSlice";
 import axiosApiSlice from "../features/axiosSlice";
+import crudSlice from "../features/crudSlice";
 
 export default configureStore({
   reducer: {
@@ -14,5 +15,6 @@ export default configureStore({
     products: productSlice,
     cart: cartSlice,
     axiosApiCall: axiosApiSlice,
+    crud: crudSlice,
   },
 });

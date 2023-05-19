@@ -7,6 +7,7 @@ import ProductRootLayout from "./components/productProject/ProductRootLayout";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { useSelector } from "react-redux";
 import Axios from "./components/axiosApiCalling/axios";
+import Crud from "./components/crudDemo/Crud";
 
 function App() {
   const [reduxExample, setReducExample] = useState("Redux-Counter");
@@ -16,6 +17,7 @@ function App() {
     "Redux-ApiCalling",
     "Redux-Product-Project",
     "Redux-Fetch-Api-Axios",
+    "Redux-CRUD-Search-Demo",
   ];
   const cartItem = useSelector((state) => state.cart);
 
@@ -31,6 +33,8 @@ function App() {
         return <ProductRootLayout />;
       case "Redux-Fetch-Api-Axios":
         return <Axios />;
+      case "Redux-CRUD-Search-Demo":
+        return <Crud />;
       default:
         break;
     }

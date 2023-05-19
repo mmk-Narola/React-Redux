@@ -16,6 +16,8 @@ body {
   min-height: 100vh; 
 } */
 
+@import "bootstrap-icons/font/bootstrap-icons.css";
+
 * {
   margin: 0;
   padding: 0;
@@ -30,7 +32,7 @@ body {
   font-weight: 500;
   color-scheme: light dark;
   /* color: rgb(23, 58, 128); */
-  /* background-color: #242424; */
+  background-color: lightgray;
   font-synthesis: none;
 }
 
@@ -83,7 +85,7 @@ section h1 {
 }
 
 .input {
-  background-color: #212121;
+  /* background-color: #212121; */
   max-width: 200px;
   height: 35px;
   padding: 5px;
@@ -93,7 +95,7 @@ section h1 {
 }
 input:focus {
   color: #ffffff;
-  background-color: #212121;
+  /* background-color: #212121; */
 }
 h3 {
   color: #ff0000;
