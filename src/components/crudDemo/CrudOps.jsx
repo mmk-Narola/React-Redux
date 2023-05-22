@@ -40,10 +40,8 @@ const CrudOps = () => {
 
   const handleUpdate = (e) => {
     e.preventDefault();
-    console.log(user);
-    dispatch(updateUser(id, user));
-    // navigate("/home");
-    setUser(initialState);
+
+    dispatch(updateUser({ id, user, navigate }));
   };
 
   const loadUserData = () => {
@@ -158,8 +156,8 @@ const CrudOps = () => {
                   label="Other"
                   id="formHorizontalRadios1"
                   name="gender"
-                  value="other"
-                  checked={user && user.gender === "other"}
+                  value="Other"
+                  checked={user && user.gender === "Other"}
                   onChange={userDetails}
                 />
               </Col>

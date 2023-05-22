@@ -44,7 +44,7 @@ const Home = () => {
             type="radio"
             label="Male"
             name="gender"
-            value="male"
+            value="Male"
             checked={radioData === "Male"}
             onChange={(e) => setRadioData(e.target.value)}
           />
@@ -54,7 +54,7 @@ const Home = () => {
             type="radio"
             label="Female"
             name="gender"
-            value="female"
+            value="Female"
             checked={radioData === "Female"}
             onChange={(e) => setRadioData(e.target.value)}
           />
@@ -64,7 +64,7 @@ const Home = () => {
             type="radio"
             label="Other"
             name="gender"
-            value="other"
+            value="Other"
             checked={radioData === "Other"}
             onChange={(e) => setRadioData(e.target.value)}
           />
@@ -102,6 +102,8 @@ const Home = () => {
                 if (radioData === "Male") {
                   return ele.gender === radioData;
                 } else if (radioData === "Female") {
+                  return ele.gender === radioData;
+                } else if (radioData === "Other") {
                   return ele.gender === radioData;
                 } else return ele;
               })
