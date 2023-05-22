@@ -1,2 +1,19 @@
-#js
-node_module/
+# js
+node_modules/
+
+# dev
+coverage
+
+# Environment variables
+.env.local
+*.local
+
+# IDE
+.vscode/
+
+# OS
+.DS_Store
+
+# Build
+dist/
+build/
