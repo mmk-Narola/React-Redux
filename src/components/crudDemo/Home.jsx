@@ -26,10 +26,12 @@ const Home = () => {
   return (
     <div className="mt-4 col-md-8 ms-5">
       <button>
-        <Link to="/addUser">AddUser </Link>
+        <Link style={{ textDecoration: "none", color: "white" }} to="/addUser">
+          AddUser
+        </Link>
       </button>
       <Form.Group as={Row} className="mb-3">
-        <Col sm={1}>
+        <Col sm={2}>
           <Form.Check
             type="radio"
             label="All"
@@ -39,23 +41,23 @@ const Home = () => {
             onChange={(e) => setRadioData("")}
           />
         </Col>
-        <Col sm={1}>
+        <Col sm={2}>
           <Form.Check
             type="radio"
             label="Male"
             name="gender"
-            value="Male"
-            checked={radioData === "Male"}
+            value="male"
+            checked={radioData === "male"}
             onChange={(e) => setRadioData(e.target.value)}
           />
         </Col>
-        <Col sm={1}>
+        <Col sm={2}>
           <Form.Check
             type="radio"
             label="Female"
             name="gender"
-            value="Female"
-            checked={radioData === "Female"}
+            value="female"
+            checked={radioData === "female"}
             onChange={(e) => setRadioData(e.target.value)}
           />
         </Col>
@@ -64,8 +66,8 @@ const Home = () => {
             type="radio"
             label="Other"
             name="gender"
-            value="Other"
-            checked={radioData === "Other"}
+            value="other"
+            checked={radioData === "other"}
             onChange={(e) => setRadioData(e.target.value)}
           />
         </Col>
@@ -99,11 +101,11 @@ const Home = () => {
                 }
               })
               .filter((ele) => {
-                if (radioData === "Male") {
+                if (radioData === "male") {
                   return ele.gender === radioData;
-                } else if (radioData === "Female") {
+                } else if (radioData === "female") {
                   return ele.gender === radioData;
-                } else if (radioData === "Other") {
+                } else if (radioData === "other") {
                   return ele.gender === radioData;
                 } else return ele;
               })
@@ -116,7 +118,7 @@ const Home = () => {
                   <td>{item.gender}</td>
                   <td className="d-flex justy-conten-space-between">
                     <Link
-                      to={`/home/edtiUser/${item.id}`}
+                      to={`/crud-home/edtiUser/${item.id}`}
                       className="btn btn-primary my-1"
                     >
                       <i className="bi bi-pencil-square"></i>

@@ -34,7 +34,7 @@ const CrudOps = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     dispatch(createUser(user));
-    navigate("/home");
+    navigate("/crud-home");
     setUser(initialState);
   };
 
@@ -156,8 +156,8 @@ const CrudOps = () => {
                   label="Other"
                   id="formHorizontalRadios1"
                   name="gender"
-                  value="Other"
-                  checked={user && user.gender === "Other"}
+                  value="other"
+                  checked={user && user.gender === "other"}
                   onChange={userDetails}
                 />
               </Col>
@@ -172,7 +172,12 @@ const CrudOps = () => {
             </Button>
 
             <Button variant="dark">
-              <Link to="/home">Cancel</Link>
+              <Link
+                style={{ textDecoration: "none", color: "white" }}
+                to="/crud-home"
+              >
+                Cancel
+              </Link>
             </Button>
           </Form>
         </Card.Body>

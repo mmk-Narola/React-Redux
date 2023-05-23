@@ -45,7 +45,7 @@ export const updateUser = createAsyncThunk(
   async (data, { rejectWithValue }) => {
     try {
       const response = await axiosBaseURL.put(`/crud/${data.id}`, data.user);
-      data.navigate("/home");
+      data.navigate("/crud-home");
       return response.data;
     } catch (err) {
       // Use `err.response.data` as `action.payload` for a `rejected` action,

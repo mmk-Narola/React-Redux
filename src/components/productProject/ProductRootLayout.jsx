@@ -9,18 +9,19 @@ import Dashboard from "./Dashboard";
 import Cart from "./Cart";
 
 const ProductRootLayout = () => {
-  const router = createBrowserRouter(
-    createRoutesFromElements(
-      <Route>
-        <Route index element={<Dashboard />}></Route>,
-        <Route path="/cart" element={<Cart />}></Route>
-      </Route>
-    )
-  );
+  // const router = createBrowserRouter(
+  //   createRoutesFromElements(
+  //     <Route>
+  //       <Route index element={<Dashboard />}></Route>,
+  //       <Route path="/cart" element={<Cart />}></Route>
+  //     </Route>
+  //   )
+  // );
 
   return (
     <div>
-      <RouterProvider router={router} />
+      {/* <RouterProvider router={router} /> */}
+      <Dashboard />
     </div>
   );
 };

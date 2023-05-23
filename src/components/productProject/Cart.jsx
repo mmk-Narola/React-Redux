@@ -42,7 +42,7 @@ const Cart = () => {
   return (
     <div>
       <h2>CartPage</h2>
-      <Link to="/">Back</Link>
+      <Link to="/shopping">Back</Link>
       <div className="row">{cards}</div>
     </div>
   );

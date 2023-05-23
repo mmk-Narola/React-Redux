@@ -26,12 +26,9 @@ body {
 }
 body {
   font-family: "Poppins", sans-serif;
-  margin: 10px;
-  padding: 0;
   line-height: 1.5;
   font-weight: 500;
   color-scheme: light dark;
-  /* color: rgb(23, 58, 128); */
   background-color: lightgray;
   font-synthesis: none;
 }
@@ -109,4 +106,8 @@ h4 {
 }
 .ulList li {
   list-style: none;
+}
+.link {
+  text-decoration: none;
+  color: #1f1f1f;
 }

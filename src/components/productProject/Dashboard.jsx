@@ -10,7 +10,7 @@ const Dashboard = () => {
       <div className="d-flex justify-content-between">
         <h2> Dashboard</h2>
         <h2>
-          <Link to="cart">Cart({cartItem?.length})</Link>
+          <Link to="/cart">Cart({cartItem?.length})</Link>
         </h2>
       </div>
 
