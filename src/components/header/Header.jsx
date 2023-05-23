@@ -19,7 +19,7 @@ const Header = () => {
   }, [search]);
 
   return (
-    <Navbar bg="light" expand="lg">
+    <Navbar bg="light" expand="lg" className="mb-4">
       <Container fluid>
         <Navbar.Brand>Redux-ToolKit</Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
