@@ -23,7 +23,7 @@ function App() {
   );
   const Cart = React.lazy(() => import("./components/productProject/Cart"));
   const Crud = React.lazy(() => import("./components/crudDemo/Crud"));
-  const CrudOps = React.lazy(() => import("./components/posts/PostTodo"));
+  const CrudOps = React.lazy(() => import("./components/crudDemo/CrudOps"));
 
   return (
     <>
