@@ -93,6 +93,19 @@ const Header = () => {
             >
               Full-CRUD
             </NavLink>
+
+            <NavLink
+              to="/shopping"
+              style={({ isActive, isPending }) => {
+                return {
+                  fontWeight: isActive ? "bold" : "",
+                  color: isPending ? "black" : "red",
+                  textDecoration: "none",
+                };
+              }}
+            >
+              Cart
+            </NavLink>
           </Nav>
 
           <Form className="d-flex">
